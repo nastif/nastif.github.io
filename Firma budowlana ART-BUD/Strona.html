@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="pl" >
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1" charset=UTF-8">
+<link rel="stylesheet" type="text/css" href="firma 100.css">
+<title>Strona główna ART-BUD</title>
+</head>
+<body>
+<div class="headlogo">
+<img src="logo art-bud.svg" width="400" height="50" >
+</div>
+<div id="menu">
+<div class="menu">
+  <a class="active">Home</a>
+  <a href="#Zwiększamy kulturę">O nas</a>
+  <div class="uslugip">
+    <button class="puslugi">Uslugi
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="uslugip-cont">
+      <a>Obsługa klienta</a>
+      <a>Nadzór techniczny</a>
+      <a>Audyt budowlany</a>
+	  <a>Doradztwo</a>
+	  <a>Remont</a>
+	  <a>Weryfikacja prac budowlanych</a>
+	  <a>Projekt budynków</a>
+	  <a>Budownictwo</a>
+    </div>
+</div>
+  <a href="#Proekty">Proekty</a>
+  <a href="#kontakt">Skontaktuj się z nami</a>
+  <a href="#kontakt">Napisz do nas wiadomość</a>
+</div>
+</div>
+<script>
+window.onscroll = function() {myFunction()};
+
+var menu = document.getElementById("menu");
+var sticky = menu.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    menu.classList.add("sticky")
+  } else {
+    menu.classList.remove("sticky");
+  }
+}
+</script>
+<div class="czf">
+<img src="czf.png" width="100%" height="30" >
+</div>
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <div class="numbertext">1 / 3</div>
+  <img src="build0001.jpg" style="width:100%">
+  <div class="text_m">Zwiększamy kulturę</br> budownictwa w Polsce</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">2 / 3</div>
+  <img src="build0002.png" style="width:100%">
+  <div class="text_m">Dbamy o twoją reputację</div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext">3 / 3</div>
+  <img src="build0003.jpg" style="width:100%">
+  <div class="text_m">Niezawodna oszczędność</br> konstrukcji i budżetu do 50%</div>
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 2000); 
+}
+</script>
+
+<div class="content">
+<img src="o nas.jpg" class="nask" width="450" height="700" >
+<div class="ramk">
+<h3 id="Zwiększamy kulturę">O nas</h3>
+<p>ZAPLANUJEMY TWOJE MIEJSCE NA ZIEMI</p>
+<p>Nasza firma budowlana posiada potencjał umożliwiający realizację przedsięwzięć w krótkim czasie. Powierzane naszej firmie zadania
+ wykonujemy rzetelnie, terminowo, sprawnie organizacyjnie, w oparciu o duże doświadczenie i wiedzę techniczno-budowlaną.</p>
+ </div>
+ </div>
+
+ <div class="section">
+ <h2>Ponad 40 zrealizowanych projektów</h2>
+ <img src="40.png" width="500" height="450" class="40">
+ <div class="spec">
+ <p>Nasza specjalność :</p>
+<p>realizacja średnich i małych inwestycji budowlanych ( </br>budowa domów, obiekty )
+</br>kompleksowe remonty i modernizacja mieszkań, lokali, </br>obiektów
+</br>sprzedaż stolarki i ślusarki budowlanej ( okna, drzwi, rolety, </br>bramy )
+</br>fachowe wykonawstwo robót remontowych, montażowych i </br>wykończeniowych.
+</br>pełnienie funkcji jako Inwestor Zastępczy</p>
+</div>
+ </div>
+
+<div class="proekt" id="Proekty">
+<h2 class="proekt_text">Proekty</h2>
+<img src="000.png" class="000" width="1520" height="250">
+</div>
+
+<div class="ost">
+<div class="container">
+  <div style="text-align:center">
+    <h2 id="kontakt">Skontaktuj się z nami</h2>
+    <p>Wpadnij na filiżankę kawy lub zostaw nam wiadomość:</p>
+  </div>
+  <div class="row">
+    <div class="column">
+    </div>
+    <div class="column">
+      <form action="/action_page.php">
+        <label for="fname">Imię</label>
+        <input type="text" id="fname" name="firstname" placeholder="Twoje imię..">
+        <label for="lname">Nazwisko</label>
+        <input type="text" id="lname" name="lastname" placeholder="Twoje nazwisko..">
+        <label for="country">Kraj</label>
+        <select id="country" name="country">
+          <option value="poland">Poland</option>
+          <option value="usa">USA</option>
+        </select>
+        <label for="subject">Wiadomość</label>
+        <textarea id="subject" name="subject" placeholder="Napisz coś.." style="height:170px"></textarea>
+        <input type="submit" value="Zatwierdź">
+      </form>
+    </div>
+  </div>
+</div>
+
+</div>
+
+
+
+
+<div class="in">
+Autor strony: Kramarenko Anastazja 3TI nr.11
+</div>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
